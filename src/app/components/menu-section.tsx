@@ -1,5 +1,5 @@
 import { MenuItem } from '@/app/type/menu'
-import { MenuItemCard } from './menu-item-card'
+import { MenuItemCard } from './MenuItemCard'
 
 interface MenuSectionProps {
   title: string

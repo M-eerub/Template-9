@@ -1,14 +1,14 @@
 import React from "react";
-import Hero from "./components/header";
-import FirstHero from "./components/aboutus";
-import Sechero from "./components/foodcategory";
-import ThirdSec from "./components/whychooseus";
-import ForthHero from "./components/anotherdish";
-import FifthHero from "./components/chooseandpick";
-import SixHero from "./components/meetourchief";
-import SevenHero from "./components/Testimonials";
-import EightHero from "./components/Restaurant Active Process";
-import NineHero from "./components/blogpost";
+import Header from "./components/header";
+import Aboutus from "./components/aboutus";
+import Foodcategory from "./components/foodcategory";
+import Whychooseus from "./components/whychooseus";
+import Anotherdish from "./components/anotherdish";
+import Chooseandpick from "./components/chooseandpick";
+import Meetourchief from "./components/meetourchief";
+import Testimonials from "./components/Testimonials";
+import RestaurantActiveProcess from "./components/Restaurant Active Process";
+import Blogpost from "./components/blogpost";
 import SanityChefData from "./components/sanitychief";
 import SanityHomeData from "./components/sanityfood";
 import SearchHome from "./(auth)/searchdish/searchbarproduct";
@@ -17,19 +17,20 @@ import SearchHome from "./(auth)/searchdish/searchbarproduct";
 export default function Home() {
   return (
     <div>
-      <SearchHome/>
-<Hero/>
+      
+<Header/>
+<SearchHome/>
 <SanityChefData/>
 <SanityHomeData/>
-<FirstHero/>
-<Sechero/>
-<ThirdSec/>
-<ForthHero/>
-<FifthHero/>
-<SixHero/>
-<SevenHero/>
-<EightHero/>
-<NineHero/>
+<Aboutus/>
+<Foodcategory/>
+<Whychooseus/>
+<Anotherdish/>
+<Chooseandpick/>
+<Meetourchief/>
+<Testimonials/>
+<RestaurantActiveProcess/>
+<Blogpost/>
 
 
     </div>
