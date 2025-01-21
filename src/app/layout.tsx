@@ -32,7 +32,7 @@ export default function RootLayout({
         {/* Wrap everything inside AppProvider */}
         <AppProvider> 
           
-         <Navbar />
+         <Navbar/>
 
           
         <main>{children}</main>
