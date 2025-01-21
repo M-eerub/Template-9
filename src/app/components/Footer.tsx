@@ -5,7 +5,7 @@ const Footer = () => {
     <div>
         {/* <!-- Responsive Footer --> */}
 
-<footer className="bg-black text-gray-400 py-10">
+<footer className="bg-black text-gray-300 sm:text-center sm:items-center sm:flex py-10">
   <div className="container mx-auto px-4">
     <div className="flex flex-wrap justify-between">
       {/* <!-- About Section --> */}
@@ -63,7 +63,7 @@ const Footer = () => {
         </ul>
       </div>
     </div>
-    <div className="mt-8 border-t border-gray-700 pt-4 flex flex-wrap items-center justify-between bg-orange-500">
+    <div className="mt-8 border-t border-gray-700 pt-4 flex flex-wrap items-center justify-between bg-gray-400">
     <p className="text-center py-4 text-white">
           © 2024 FoodTuck. All Rights Reserved.</p>
       <div className="flex space-x-4">

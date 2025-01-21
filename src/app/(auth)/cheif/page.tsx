@@ -35,7 +35,7 @@ const ChefGallery = () => {
             Home
           </a>{" "}
           <span className="text-orange-500">›</span>{" "}
-          <span className="text-orange-500">Chefs</span>
+          <span className="text-orange-500">Cheifs</span>
         </p>
       </div>
 

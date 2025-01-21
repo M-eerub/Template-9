@@ -8,7 +8,7 @@ function Hero() {
       {/* Heading */}
       <div className="text-white w-full md:w-[50%]">
         <h1 className="text-[20px] md:text-[28px] lg:text-[32px] font-normal text-[#FF9F0D] whitespace-nowrap text-center md:text-left">
-          Its Quick & Amazing!
+          Its Quick & Amusing!
         </h1>
 
         <h1 className="text-[24px] md:text-[40px] lg:text-[50px] font-bold whitespace-normal mt-3 text-center md:text-left">
