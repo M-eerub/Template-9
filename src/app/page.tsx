@@ -1,36 +1,36 @@
 import React from "react";
-import Header from "./components/header";
-import Aboutus from "./components/aboutus";
-import Foodcategory from "./components/foodcategory";
-import Whychooseus from "./components/whychooseus";
-import Anotherdish from "./components/anotherdish";
-import Chooseandpick from "./components/chooseandpick";
-import Meetourchief from "./components/meetourchief";
+import Hero from "./components/Hero";
+import Food from "./components/Food";
+import Choose from "./components/Choose";
+import Meet from "./components/Meet";
 import Testimonials from "./components/Testimonials";
 import RestaurantActiveProcess from "./components/Restaurant Active Process";
-import Blogpost from "./components/blogpost";
-import SanityChefData from "./components/sanitychief";
-import SanityHomeData from "./components/sanityfood";
+import Blog from "./components/Blog";
+import SanityChef from "./components/Sanitychef";
 import SearchHome from "./(auth)/searchdish/searchbarproduct";
+import Whychoose from "./components/Whychoose";
+import About from "./components/About";
+import Another from "./components/Another";
+import Sanityfetchfood from "./components/Sanityfood";
 
 
 export default function Home() {
   return (
     <div>
       
-<Header/>
+<Hero/>
 <SearchHome/>
-<SanityChefData/>
-<SanityHomeData/>
-<Aboutus/>
-<Foodcategory/>
-<Whychooseus/>
-<Anotherdish/>
-<Chooseandpick/>
-<Meetourchief/>
+<SanityChef/>
+<Sanityfetchfood/>
+<About/>
+<Food/>
+<Whychoose/>
+<Another/>
+<Choose/>
+<Meet/>
 <Testimonials/>
 <RestaurantActiveProcess/>
-<Blogpost/>
+<Blog/>
 
 
     </div>

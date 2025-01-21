@@ -8,7 +8,7 @@ const chefs = [
   { name: 'W.Readfroad', role: 'Chef', image: '/c4.jpeg' },
 ]
 
-const SixHero: React.FC = () => {
+const Meet: React.FC = () => {
   return (
     <section className="bg-black text-white py-16 px-4 md:px-8">
       <div className="container mx-auto">
@@ -49,5 +49,5 @@ const SixHero: React.FC = () => {
   )
 }
 
-export default SixHero
+export default Meet;
 

@@ -15,7 +15,7 @@ const menuItems = [
   { name: "Mushroom Pizza", description: "Lacus nisi, et ac dapibus velit in consequat.", price: "12.5$", image: "/18.jpeg" },
 ];
 
-const FifthHero: React.FC = () => {
+const Choose: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState("Breakfast");
 
   return (
@@ -74,4 +74,4 @@ const FifthHero: React.FC = () => {
   );
 };
 
-export default FifthHero;
+export default Choose;

@@ -14,7 +14,7 @@ type Foods = {
   imageUrl: string;
 };
 
-export default async function SanityHomeData() {
+export default async function Sanityfetchfood () {
   let foods: Foods[] = [];
   let isLoading = false;
 

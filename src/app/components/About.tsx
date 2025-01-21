@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
-const FirstHero = () => {
+const About = () => {
   return (
     <section className="bg-black text-white py-16 px-6 md:px-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -61,4 +61,4 @@ const FirstHero = () => {
   );
 };
 
-export default FirstHero;
+export default About;

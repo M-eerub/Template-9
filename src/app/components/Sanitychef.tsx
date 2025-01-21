@@ -4,6 +4,7 @@ import React from "react"
 import Link from "next/link"
 
 
+
 // Define Types for the Chef Data
 type Chef = {
   _id: string
@@ -16,7 +17,7 @@ type Chef = {
   available: boolean
 }
 
-export default async function SanityChefData() {
+export default async function SanityChef() {
   let chefs: Chef[] = []
   let isLoading = false
 

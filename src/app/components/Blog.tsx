@@ -21,7 +21,7 @@ const blogPosts = [
   },
 ]
 
-export default function NineHero() {
+export default function Blog() {
   return (
     <section className="bg-black text-white py-16">
       <div className="container mx-auto px-4">

@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 
-export default function ForthHero() {
+const Another= () => {
   return (
     
     <div className="min-h-screen bg-black text-white p-2 flex flex-col justify-center items-center">
@@ -26,3 +26,4 @@ export default function ForthHero() {
     </div>
   )
 }
+export default Another;

@@ -24,7 +24,7 @@ const Navbar = () => {
           <Link href="/menu" className="hover:text-orange-500">Menu</Link>
           <Link href="/details" className="hover:text-orange-500">Blog</Link>
           <Link href="/checkout" className="hover:text-orange-500">Pages</Link>
-          <Link href="/cheif" className="hover:text-orange-500">About</Link>
+          <Link href="/cheif" className="hover:text-orange-500">Chefs</Link>
           <Link href="/shop" className="hover:text-orange-500">Shop</Link>
           <Link href="/contact" className="hover:text-orange-500">Contact</Link>
         </div>

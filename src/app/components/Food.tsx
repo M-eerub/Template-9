@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 
-const Sechero = () => {
+const Food = () => {
   return (
     <section className="bg-black text-white py-16 px-6 md:px-12">
       <div className="max-w-7xl mx-auto text-center">
@@ -62,4 +62,4 @@ const Sechero = () => {
   );
 };
 
-export default Sechero;
+export default Food;

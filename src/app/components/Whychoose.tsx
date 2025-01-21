@@ -2,7 +2,7 @@
 import React from "react";
 import { FaHamburger, FaCookie, FaWineGlassAlt } from "react-icons/fa";
 
-const ThirdSec = () => {
+const Whychoose = () => {
   return (
     <section className="bg-black text-white py-16 px-6 md:px-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -86,4 +86,4 @@ const ThirdSec = () => {
   );
 };
 
-export default ThirdSec;
+export default Whychoose;
