@@ -32,11 +32,6 @@ export default function Home() {
 <NineHero/>
 
 
-
-
-
-
-
     </div>
   );
 }

@@ -10,7 +10,7 @@ const Footer = () => {
     <div className="flex flex-wrap justify-between">
       {/* <!-- About Section --> */}
       <div className="w-full md:w-1/4 mb-6 md:mb-0">
-        <h4 className="text-lg font-semibold text-white mb-4">About Us</h4>
+        <h4 className="text-lg font-semibold text-white mb-4 ">About Us</h4>
         <p className="text-sm">
           Prepare clients and deliver flawless business insights on ground-breaking methods and
           professional streamlined commerce in major circles around the world.
@@ -63,7 +63,7 @@ const Footer = () => {
         </ul>
       </div>
     </div>
-    <div className="mt-8 border-t border-gray-700 pt-4 flex flex-wrap items-center justify-between bg-gray-400">
+    <div className="mt-8 border-t border-gray-700 pt-4 flex flex-wrap items-center justify-between bg-orange-500">
     <p className="text-center py-4 text-white">
           © 2024 FoodTuck. All Rights Reserved.</p>
       <div className="flex space-x-4">

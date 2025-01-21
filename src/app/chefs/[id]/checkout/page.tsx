@@ -1,9 +1,9 @@
 import { SanityFetch } from "@/sanity/lib/fetch"
 import { groq } from "next-sanity"
 import { redirect } from "next/navigation"
-import { Button } from "@/app/components/ui/button"
 import { Card } from "@/app/components/ui/card"
 import CheckoutForm from "./checkout-form"
+import Image from "next/image"
 
 async function getChef(id: string) {
   const query = groq`*[_type == "chef" && _id == $id][0]{
@@ -44,7 +44,7 @@ export default async function CheckoutPage({ params }: { params: { id: string } 
           <Card className="p-6 sticky top-4">
             <h2 className="text-xl font-bold mb-4">Order Summary</h2>
             <div className="flex items-center gap-4 mb-4">
-              <img
+              <Image
                 src={chef.imageUrl || "/placeholder.svg"}
                 alt={chef.name}
                 className="w-16 h-16 rounded-full object-cover"

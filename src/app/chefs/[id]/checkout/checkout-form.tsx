@@ -6,7 +6,7 @@ import { Input } from "@/app/components/ui/input"
 import { Label } from "@/app/components/ui/label"
 import Image from "next/image"
 
-export default function CheckoutForm({ chefId }: { chefId: string }) {
+export default function CheckoutForm({ }: { chefId: string }) {
   const [isProcessing, setIsProcessing] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {

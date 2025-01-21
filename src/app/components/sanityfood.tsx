@@ -2,6 +2,7 @@ import { sanityFetch } from "@/sanity/lib/live"; // Import the function to fetch
 import { foodQuery } from "@/sanity/lib/queries"; // Import your query
 import React from "react";
 
+
 // Define Types for the Food Data
 type Foods = {
   _id: string;

@@ -3,6 +3,7 @@ import { chefQuery } from "@/sanity/lib/queries"
 import React from "react"
 import Link from "next/link"
 
+
 // Define Types for the Chef Data
 type Chef = {
   _id: string

@@ -14,7 +14,7 @@ export default function Home() {
     { id: 'drink', name: 'Drinks' }
   ];
 
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery] = useState('');
   const [filteredItems, setFilteredItems] = useState(menuItems);
 
   // Handle Search and Filtering
