@@ -1,7 +1,7 @@
 "use client";
 import { SanityFetch } from "@/sanity/lib/fetch";
 import { groq } from "next-sanity";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useParams } from "next/navigation";
@@ -47,14 +47,20 @@ async function getChef(id: string): Promise<Chef | null> {
 //   }));
 // }
 
-const { id }: any = useParams();
-export default async function ChefPage() {
-  const chef = await getChef(id);
+const ChefPage = () => {
+  const { id }: any = useParams();
+  const [chef, setChef] = useState() as any;
+  const fetchData = async () => {
+    const chefs = await getChef(id);
+    if (!chefs) {
+      return <div className="text-center text-2xl mt-10">Chef not found</div>;
+    }
+    setChef(chefs);
+  };
 
-  if (!chef) {
-    return <div className="text-center text-2xl mt-10">Chef not found</div>;
-  }
-
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="bg-white shadow-xl rounded-lg overflow-hidden">
@@ -107,4 +113,6 @@ export default async function ChefPage() {
       </div>
     </div>
   );
-}
+};
+
+export default ChefPage;
