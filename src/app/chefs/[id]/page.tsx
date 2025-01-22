@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 type Chef = {
-  _id: string;
+  _id: any;
   name: string;
   position: string;
   experience: number;
@@ -16,7 +16,7 @@ type Chef = {
   available: boolean;
 };
 
-async function getChef(id: string): Promise<Chef | null> {
+async function getChef(id: any): Promise<any> {
   const query = groq`*[_type == "chef" && _id == $id][0]{
     _id,
     name,
@@ -30,7 +30,7 @@ async function getChef(id: string): Promise<Chef | null> {
 
   try {
     // Remove the generic type parameter from SanityFetch
-    const chef = await SanityFetch({ query, params: { id } });
+    const chef = await SanityFetch({ query, params: { id } as any });
     return chef;
   } catch (error) {
     console.error("Error fetching chef data:", error);
