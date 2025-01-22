@@ -1,7 +1,7 @@
 import { SanityFetch } from "@/sanity/lib/fetch"
 import { groq } from "next-sanity"
 import { redirect } from "next/navigation"
-import { Card } from "@/app/components/ui/card"
+import { Card } from "@/components/ui/card"
 import CheckoutForm from "./checkout-form"
 import Image from "next/image"
 
