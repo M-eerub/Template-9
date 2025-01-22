@@ -1,3 +1,4 @@
+'use client'
 import { SanityFetch } from "@/sanity/lib/fetch";
 import { groq } from "next-sanity";
 import React from "react";
