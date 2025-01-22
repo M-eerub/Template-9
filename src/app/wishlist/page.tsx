@@ -1,22 +1,22 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import Image from 'next/image'
-import { useAppContext } from '../context/AppContext'
-import { Trash2, ShoppingCart } from 'lucide-react'
-import { MenuItem } from '../../app/type/menu'
+import Link from "next/link";
+import Image from "next/image";
+import { useAppContext } from "../context/AppContext";
+import { Trash2, ShoppingCart } from "lucide-react";
+import { MenuItem } from "../../app/type/menu";
 
 export default function WishlistPage() {
-  const { wishlist, removeFromWishlist, addToCart } = useAppContext()
+  const { wishlist, removeFromWishlist, addToCart } = useAppContext();
 
   const handleRemoveFromWishlist = (itemId: string) => {
-    removeFromWishlist(String(itemId))
-  }
+    removeFromWishlist(String(itemId));
+  };
 
   const handleAddToCart = (item: MenuItem) => {
-    addToCart(item)
-    removeFromWishlist(String(item.id))
-  }
+    addToCart(item);
+    removeFromWishlist(String(item.id));
+  };
 
   return (
     <main className="min-h-screen bg-gray-50 py-12">
@@ -27,7 +27,10 @@ export default function WishlistPage() {
         ) : (
           <ul className="space-y-4">
             {wishlist.map((item) => (
-              <li key={String(item.id)} className="bg-white rounded-lg shadow p-4 flex items-center">
+              <li
+                key={String(item.id)}
+                className="bg-white rounded-lg shadow p-4 flex items-center"
+              >
                 <div className="flex-shrink-0 h-24 w-24 relative mr-4">
                   <Image
                     src={item.image}
@@ -35,11 +38,15 @@ export default function WishlistPage() {
                     fill
                     className="object-cover rounded"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    width={500}
+                    height={500}
                   />
                 </div>
                 <div className="flex-grow">
                   <h3 className="text-lg font-semibold">{item.name}</h3>
-                  <p className="text-gray-600">${item.priceRange.min} - ${item.priceRange.max}</p>
+                  <p className="text-gray-600">
+                    ${item.priceRange.min} - ${item.priceRange.max}
+                  </p>
                 </div>
                 <div className="flex space-x-2">
                   <button
@@ -59,11 +66,13 @@ export default function WishlistPage() {
             ))}
           </ul>
         )}
-        <Link href="/" className="mt-8 inline-block text-blue-600 hover:text-blue-700">
+        <Link
+          href="/"
+          className="mt-8 inline-block text-blue-600 hover:text-blue-700"
+        >
           Continue Shopping
         </Link>
       </div>
     </main>
-  )
+  );
 }
-

@@ -3,7 +3,6 @@ import { foodQuery } from "@/sanity/lib/queries"; // Import your query
 import Image from "next/image";
 import React from "react";
 
-
 // Define Types for the Food Data
 type Foods = {
   _id: string;
@@ -15,7 +14,7 @@ type Foods = {
   imageUrl: string;
 };
 
-export default async function Sanityfetchfood () {
+export default async function Sanityfetchfood() {
   let foods: Foods[] = [];
   let isLoading = false;
 
@@ -52,6 +51,8 @@ export default async function Sanityfetchfood () {
                 src={food.imageUrl}
                 alt={food.name}
                 className="w-full h-48 object-cover"
+                width={500}
+                height={500}
               />
 
               <div className="p-4 space-y-3 flex-grow flex flex-col justify-between">

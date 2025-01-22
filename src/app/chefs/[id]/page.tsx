@@ -61,6 +61,8 @@ export default async function ChefPage({ params }: { params: { id: string } }) {
               className="h-48 w-full object-cover md:w-48"
               src={chef.imageUrl || "/placeholder.svg"}
               alt={chef.name}
+              width={500}
+                      height={500}
             />
           </div>
           <div className="p-8">

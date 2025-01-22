@@ -1,22 +1,22 @@
-import { SanityFetch } from "@/sanity/lib/fetch"
-import { groq } from "next-sanity"
-import { redirect } from "next/navigation"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import Link from "next/link"
-import Image from "next/image"
+import { SanityFetch } from "@/sanity/lib/fetch";
+import { groq } from "next-sanity";
+import { redirect } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import Link from "next/link";
+import Image from "next/image";
 
 type Chef = {
-  _id: string
-  name: string
-  position: string
-  experience: number
-  specialty: string
-  imageUrl: string
-  description: string
-  available: boolean
-  hourlyRate: number // Make sure this field exists in your Sanity schema
-}
+  _id: string;
+  name: string;
+  position: string;
+  experience: number;
+  specialty: string;
+  imageUrl: string;
+  description: string;
+  available: boolean;
+  hourlyRate: number; // Make sure this field exists in your Sanity schema
+};
 
 async function getChef(id: string): Promise<Chef | null> {
   const query = groq`*[_type == "chef" && _id == $id][0]{
@@ -29,22 +29,26 @@ async function getChef(id: string): Promise<Chef | null> {
     description,
     available,
     hourlyRate
-  }`
+  }`;
 
   try {
-    const chef = await SanityFetch({ query, params: { id } })
-    return chef
+    const chef = await SanityFetch({ query, params: { id } });
+    return chef;
   } catch (error) {
-    console.error("Error fetching chef data:", error)
-    return null
+    console.error("Error fetching chef data:", error);
+    return null;
   }
 }
 
-export default async function ChefPaymentPage({ params }: { params: { id: string } }) {
-  const chef = await getChef(params.id)
+export default async function ChefPaymentPage({
+  params,
+}: {
+  params: { id: string };
+}) {
+  const chef = await getChef(params.id);
 
   if (!chef) {
-    redirect("/chefs")
+    redirect("/chefs");
   }
 
   return (
@@ -56,6 +60,8 @@ export default async function ChefPaymentPage({ params }: { params: { id: string
             src={chef.imageUrl || "/placeholder.svg"}
             alt={chef.name}
             className="w-20 h-20 rounded-full object-cover"
+            width={500}
+            height={500}
           />
           <div>
             <h2 className="text-xl font-semibold">{chef.name}</h2>
@@ -78,6 +84,5 @@ export default async function ChefPaymentPage({ params }: { params: { id: string
         </Link>
       </Card>
     </div>
-  )
+  );
 }
-
