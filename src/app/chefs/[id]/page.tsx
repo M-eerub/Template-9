@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { SanityFetch } from "@/sanity/lib/fetch";
 import { groq } from "next-sanity";
 import React from "react";
@@ -38,14 +38,14 @@ async function getChef(id: string): Promise<Chef | null> {
   }
 }
 
-export async function generateStaticParams() {
-  const query = groq`*[_type == "chef"]{ _id }`;
-  // Remove the generic type parameter here as well
-  const chefs = await SanityFetch({ query });
-  return chefs.map((chef: { _id: any }) => ({
-    id: chef._id,
-  }));
-}
+// export async function generateStaticParams() {
+//   const query = groq`*[_type == "chef"]{ _id }`;
+//   // Remove the generic type parameter here as well
+//   const chefs = await SanityFetch({ query });
+//   return chefs.map((chef: { _id: any }) => ({
+//     id: chef._id,
+//   }));
+// }
 
 export default async function ChefPage() {
   const { id }: any = useParams();
