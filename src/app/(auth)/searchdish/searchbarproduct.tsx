@@ -1,9 +1,9 @@
 "use client"
 
 import { SetStateAction, useState } from "react"
-import { Input } from "@/app/Components/ui/input"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/app/Components/ui/card"
-import { Badge } from "@/app/Components/ui/badge"
+import { Input } from "@/app/components/ui/input"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/app/components/ui/card"
+import { Badge } from "@/app/components/ui/badge"
 import Image from "next/image"
 
 interface Product {

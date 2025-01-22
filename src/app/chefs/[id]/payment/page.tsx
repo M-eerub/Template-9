@@ -1,8 +1,8 @@
 import { SanityFetch } from "@/sanity/lib/fetch"
 import { groq } from "next-sanity"
 import { redirect } from "next/navigation"
-import { Button } from "@/app/Components/ui/button"
-import { Card } from "@/app/Components/ui/card"
+import { Button } from "@/app/components/ui/button"
+import { Card } from "@/app/components/ui/card"
 import Link from "next/link"
 
 type Chef = {

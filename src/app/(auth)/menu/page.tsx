@@ -2,8 +2,8 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { menuItems } from '@/app/data/menu-items';
-import { MenuSection } from '@/app/Components/menu-section';
 import { ShoppingCart, Heart } from 'lucide-react';
+import { MenuSection } from '@/app/components/menu-section';
 // import SearchBar from '@/app/components/searchbar/Searchbar'; // Import SearchBar component
 
 export default function Home() {

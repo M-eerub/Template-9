@@ -1,6 +1,7 @@
 import { MenuItem } from '@/app/type/menu'
 import { MenuItemCard } from './MenuItemCard'
 
+
 interface MenuSectionProps {
   title: string
   items: MenuItem[]
