@@ -6,7 +6,7 @@ import { Menu, X, ShoppingCart, Search } from 'lucide-react'
 import { BiUser } from 'react-icons/bi'
 
 
-const Navbar = () => {
+export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -89,4 +89,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+
