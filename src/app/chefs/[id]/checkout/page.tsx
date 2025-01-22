@@ -1,19 +1,20 @@
 import { SanityFetch } from "@/sanity/lib/fetch";
 import { groq } from "next-sanity";
-import { redirect } from "next/navigation";
+import { redirect, useParams } from "next/navigation";
 import { Card } from "@/components/ui/card";
 import CheckoutForm from "./checkout-form";
 import Image from "next/image";
 
 interface Chef {
-  _id: string;
+  _id: any;
   name: string;
   position: string;
   hourlyRate: number;
   imageUrl: string;
 }
 
-async function getChef(id: string): Promise<Chef | null> {
+async function getChef(id: any): Promise<Chef | null> {
+  // const { id } = useParams()
   const query = groq`*[_type == "chef" && _id == $id][0]{
     _id,
     name,
@@ -31,7 +32,11 @@ async function getChef(id: string): Promise<Chef | null> {
   }
 }
 
-export default async function CheckoutPage({ params }: { params: { id: string } }) {
+export default async function CheckoutPage({
+  params,
+}: {
+  params: { id: string };
+}) {
   const chef = await getChef(params.id);
 
   if (!chef) {
