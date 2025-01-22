@@ -21,7 +21,7 @@ const chefs = [
 const ChefGallery = () => {
   return (
 
-        <div className="bg-gray-100 py-10">
+        <div className="bg-orange-200 py-10">
         {/* Header Section */}
       <div
         className="relative bg-cover bg-center h-96 flex flex-col items-center justify-center"

@@ -13,11 +13,10 @@ import About from "./components/About";
 import Another from "./components/Another";
 import Sanityfetchfood from "./components/Sanityfood";
 
-
 export default function Home() {
   return (
     <div>
-      
+
 <Hero/>
 <SearchHome/>
 <SanityChef/>
