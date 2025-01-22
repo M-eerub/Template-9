@@ -47,8 +47,8 @@ async function getChef(id: string): Promise<Chef | null> {
 //   }));
 // }
 
+const { id }: any = useParams();
 export default async function ChefPage() {
-  const { id }: any = useParams();
   const chef = await getChef(id);
 
   if (!chef) {
