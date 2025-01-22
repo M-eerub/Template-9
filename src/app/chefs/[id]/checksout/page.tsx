@@ -60,7 +60,7 @@ export default function CheckoutPage() {
       return null; // Required to avoid rendering further if redirect occurs
     }
     setChef(chefs);
-    console.log(chefs?.imageUrl, "==>>>> iamges");
+    // console.log(chefs?.imageUrl, "==>>>> iamges");
   };
 
   useEffect(() => {
