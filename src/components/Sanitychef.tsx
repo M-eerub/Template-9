@@ -1,8 +1,8 @@
-import { SanityFetch } from "@/sanity/lib/fetch"; // Update this import to match your project structure
-import { chefQuery } from "@/sanity/lib/queries";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { client } from "@/sanity/lib/client";
+import { groq } from "next-sanity";
 
 // Define Types for the Chef Data
 type Chef = {
@@ -22,7 +22,8 @@ export default async function SanityChef() {
 
   try {
     isLoading = true;
-    const result = await SanityFetch({ query: chefQuery });
+    const query = groq`*[_type == "chef" && _id == $id][0]`;
+    const result = await client.fetch(query);
     chefs = result || []; // Adjust this based on your actual data structure
   } catch (error) {
     console.error("Error fetching data from Sanity:", error);

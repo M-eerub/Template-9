@@ -1,5 +1,4 @@
 "use client";
-import { SanityFetch } from "@/sanity/lib/fetch";
 import { groq } from "next-sanity";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";

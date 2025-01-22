@@ -1,5 +1,6 @@
-import { sanityFetch } from "@/sanity/lib/live"; // Import the function to fetch data
-import { foodQuery } from "@/sanity/lib/queries"; // Import your query
+ // Import your query
+import { client } from "@/sanity/lib/client";
+import { groq } from "next-sanity";
 import Image from "next/image";
 import React from "react";
 
@@ -21,7 +22,8 @@ export default async function Sanityfetchfood() {
   try {
     // Fetching the food data using Sanity's query
     isLoading = true;
-    const result = await sanityFetch({ query: foodQuery }); // Fetch data
+     const query = groq`*[_type == "foods"`
+    const result = await client.fetch(query)// Fetch data
     foods = result?.data || []; // Make sure to access the data field correctly
   } catch (error) {
     console.error("Error fetching data from Sanity:", error);

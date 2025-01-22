@@ -1,5 +1,4 @@
 "use client";
-import { SanityFetch } from "@/sanity/lib/fetch";
 import { groq } from "next-sanity";
 import { redirect, useParams } from "next/navigation";
 import { Card } from "@/components/ui/card";
