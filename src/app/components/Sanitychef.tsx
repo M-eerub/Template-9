@@ -2,6 +2,7 @@ import { SanityFetch } from "@/sanity/lib/fetch" // Update this import to match 
 import { chefQuery } from "@/sanity/lib/queries"
 import React from "react"
 import Link from "next/link"
+import Image from "next/image"
 
 
 
@@ -44,7 +45,7 @@ export default async function SanityChef() {
               className="bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
             >
               <div className="relative h-64">
-                <img
+                <Image
                   src={chef.imageUrl || "/placeholder.svg"}
                   alt={chef.name}
                   className="w-full h-full object-cover object-center"

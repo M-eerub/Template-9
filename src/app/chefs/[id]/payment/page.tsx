@@ -4,6 +4,7 @@ import { redirect } from "next/navigation"
 import { Button } from "@/app/components/ui/button"
 import { Card } from "@/app/components/ui/card"
 import Link from "next/link"
+import Image from "next/image"
 
 type Chef = {
   _id: string
@@ -51,7 +52,7 @@ export default async function ChefPaymentPage({ params }: { params: { id: string
       <Card className="p-6">
         <h1 className="text-2xl font-bold mb-4">Hire {chef.name}</h1>
         <div className="flex items-center gap-4 mb-6">
-          <img
+          <Image
             src={chef.imageUrl || "/placeholder.svg"}
             alt={chef.name}
             className="w-20 h-20 rounded-full object-cover"

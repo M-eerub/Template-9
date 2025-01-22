@@ -1,5 +1,6 @@
 import { sanityFetch } from "@/sanity/lib/live"; // Import the function to fetch data
 import { foodQuery } from "@/sanity/lib/queries"; // Import your query
+import Image from "next/image";
 import React from "react";
 
 
@@ -47,7 +48,7 @@ export default async function Sanityfetchfood () {
               className="border border-gray-200 rounded-lg shadow-md overflow-hidden bg-white hover:shadow-[0px_4px_20px_5px_rgba(0,120,255,0.6)] transition-shadow duration-300 flex flex-col"
             >
               {/* Image */}
-              <img
+              <Image
                 src={food.imageUrl}
                 alt={food.name}
                 className="w-full h-48 object-cover"
