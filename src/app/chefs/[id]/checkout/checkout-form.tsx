@@ -1,9 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { Button } from "@/app/components/ui/button"
-import { Input } from "@/app/components/ui/input"
-import { Label } from "@/app/components/ui/label"
+import { Button } from "@/app/Components/ui/button"
+import { Input } from "@/app/Components/ui/input"
+import { Label } from "@/app/Components/ui/label"
 import Image from "next/image"
 
 export default function CheckoutForm({ }: { chefId: string }) {
