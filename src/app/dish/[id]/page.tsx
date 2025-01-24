@@ -1,16 +1,12 @@
 "use client";
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { ArrowLeft, ShoppingCart, Heart } from "lucide-react";
-import { menuItems } from "../../data/menu-items";
-import { useAppContext } from "@/app/context/AppContext";
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowLeft, ShoppingCart, Heart } from 'lucide-react';
+import { menuItems } from '../../data/menu-items';
+import { useAppContext } from '@/app/context/AppContext';
 
-export default function DishPage({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
+export default function DishPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = React.use(params); // Unwrapping the `params` promise
   const dish = menuItems.find((item) => item.id === id);
   const { addToCart, addToWishlist } = useAppContext();
@@ -38,8 +34,6 @@ export default function DishPage({
               fill
               className="object-cover"
               sizes="(max-width: 1200px) 100vw, 1200px"
-              width={500}
-              height={500}
             />
           </div>
 
@@ -65,9 +59,7 @@ export default function DishPage({
               </ul>
             </div>
 
-            <div className="text-gray-500 text-sm mb-6">
-              {dish.calories} Calories
-            </div>
+            <div className="text-gray-500 text-sm mb-6">{dish.calories} Calories</div>
 
             <div className="flex space-x-4">
               {/* Add to Cart Button */}

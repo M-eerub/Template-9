@@ -63,14 +63,14 @@ export const Footer = () => {
         </ul>
       </div>
     </div>
-    <div className="mt-8 border-t border-gray-700 pt-4 flex flex-wrap items-center justify-between bg-orange-500">
+    <div className="mt-10 border-t border-gray-700 pt-4 flex flex-wrap items-center justify-between bg-orange-500">
     <p className="text-center py-4 text-white">
           © 2024 FoodTuck. All Rights Reserved.</p>
-      <div className="flex space-x-4">
-        <a href="#" className="text-white hover:text-gray-100">Facebook</a>
-        <a href="#" className="text-white hover:text-gray-100">Twitter</a>
-        <a href="#" className="text-white hover:text-gray-100">LinkedIn</a>
-        <a href="#" className="text-white hover:text-gray-100">Instagram</a>
+      <div className="flex space-x-6">
+        <a href="#" className="text-white hover:text-blue-700">Facebook</a>
+        <a href="#" className="text-white hover:text-blue-700">Twitter</a>
+        <a href="#" className="text-white hover:text-blue-700">LinkedIn</a>
+        <a href="#" className="text-white hover:text-blue-700">Instagram</a>
       </div>
     </div>
   </div>

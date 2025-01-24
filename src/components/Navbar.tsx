@@ -13,6 +13,7 @@ export const Navbar = () => {
     <nav className="bg-black text-white py-4">
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
+        
         <div className="text-2xl font-bold">
           <span className="text-white">Food</span>
           <span className="text-orange-500">tuck</span>

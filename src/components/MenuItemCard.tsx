@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-import { MenuItem } from "@/app/type/menu";
+import Image from 'next/image'
+import Link from 'next/link'
+import { MenuItem } from '@/app/type/menu'
 
 export function MenuItemCard({ item }: { item: MenuItem }) {
   return (
@@ -10,11 +10,8 @@ export function MenuItemCard({ item }: { item: MenuItem }) {
           <Image
             src={item.image}
             alt={item.name}
-            fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            width={500}
-            height={500}
           />
         </div>
         <div className="p-4">
@@ -24,17 +21,14 @@ export function MenuItemCard({ item }: { item: MenuItem }) {
               ${item.priceRange.min} - ${item.priceRange.max}
             </span>
           </div>
-          <p className="text-gray-600 text-sm mb-2 line-clamp-2">
-            {item.description}
-          </p>
+          <p className="text-gray-600 text-sm mb-2 line-clamp-2">{item.description}</p>
           <div className="flex justify-between items-center text-sm">
             <span className="text-gray-500">{item.calories} CAL</span>
-            <span className="text-blue-600 hover:text-blue-700">
-              View Details →
-            </span>
+            <span className="text-blue-600 hover:text-blue-700">View Details →</span>
           </div>
         </div>
       </div>
     </Link>
-  );
+  )
 }
+

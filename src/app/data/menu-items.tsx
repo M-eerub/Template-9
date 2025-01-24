@@ -9,7 +9,7 @@ export const menuItems: MenuItem[] = [
     ingredients: ['Fresh squid', 'Seasoned flour', 'Marinara sauce', 'Lemon', 'Parsley', 'Garlic aioli'],
     calories: 420,
     priceRange: { min: 12, max: 18 },
-    image: '/images/calamary.jpeg',
+    image: '/aqsa/starter menu/arrabiata-pasta.jpg',
     category: 'starter'
   },
   {

@@ -11,3 +11,5 @@ export const { sanityFetch, SanityLive } = defineLive({
     apiVersion: 'vX' 
   }) 
 });
+ 
+// arey import ke bad tw function ka name aata h naw ? hn are ladki  hogyi import images sanity se 

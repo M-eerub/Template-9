@@ -1,10 +1,9 @@
- // Import your query
-import { client } from "@/sanity/lib/client";
-import { groq } from "next-sanity";
-import Image from "next/image";
+import { sanityFetch } from "@/sanity/lib/live"; // Import the function to fetch data
+import { foodQuery } from "@/sanity/lib/query"; // Import your query
 import React from "react";
+import Image from "next/image";
 
-// Define Types for the Food Data
+// Define Types for the Food Data       
 type Foods = {
   _id: string;
   name: string;
@@ -15,15 +14,14 @@ type Foods = {
   imageUrl: string;
 };
 
-export default async function Sanityfetchfood() {
+export default async function SanityHomeData() {
   let foods: Foods[] = [];
   let isLoading = false;
 
   try {
     // Fetching the food data using Sanity's query
     isLoading = true;
-     const query = groq`*[_type == "foods"`
-    const result = await client.fetch(query)// Fetch data
+    const result = await sanityFetch({ query: foodQuery }); // Fetch data
     foods = result?.data || []; // Make sure to access the data field correctly
   } catch (error) {
     console.error("Error fetching data from Sanity:", error);
@@ -53,8 +51,8 @@ export default async function Sanityfetchfood() {
                 src={food.imageUrl}
                 alt={food.name}
                 className="w-full h-48 object-cover"
-                width={500}
-                height={500}
+                height={100}
+                width={100}
               />
 
               <div className="p-4 space-y-3 flex-grow flex flex-col justify-between">

@@ -6,23 +6,22 @@ import Meet from "../components/Meet";
 import Testimonials from "../components/Testimonials";
 import RestaurantActiveProcess from "../components/Restaurant Active Process";
 import Blog from "../components/Blog";
-import SanityChef from "../components/Sanitychef";
-import SearchHome from "./(auth)/searchdish/searchbarproduct";
 import Whychoose from "../components/Whychoose";
 import About from "../components/About";
 import Another from "../components/Another";
-import Sanityfetchfood from "../components/Sanityfood";
+import SanityChefData from "@/components/Sanitychef";
+import SanityHomeData from "@/components/Sanityfood";
+import SearchHome from "./(auth)/searchdish/searchbarproduct";
 
 
 
 export default function Home() {
   return (
     <div>
-
-<Hero/>
-<SearchHome/>
-<SanityChef/>
-<Sanityfetchfood/>
+      <Hero/>
+      <SearchHome/>
+<SanityChefData/>
+<SanityHomeData/>
 <About/>
 <Food/>
 <Whychoose/>
