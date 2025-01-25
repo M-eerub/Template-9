@@ -3,7 +3,10 @@ import React from 'react'
 
 const Another= () => {
   return (
-    
+  <div className=' bg-black text-white space-y-24'>
+    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8 ml-[510px]">
+          <span className="text-orange-400">Choose</span> Dishes
+        </h1>
     <div className="min-h-screen bg-black text-white p-2 flex flex-col justify-center items-center">
       <div className="w-full -mt-80 max-w-[1000px] grid gap-6 md:grid-cols-4 text-center">
         <div className="p-6 bg-white shadow-md rounded-md text-black">
@@ -15,14 +18,15 @@ const Another= () => {
           <div className="text-2xl font-bold">Another Dish</div>
         </div>
         <div className="p-6  bg-white shadow-md rounded-md text-black">
-          <img src="/on3.jpeg" alt="Yet Another" className="mb-4 h-60 w-52 rounded-md" />
+          <img src="/on3.jpeg" alt="Yet Another" className="mb-4  rounded-md" />
           <div className="text-2xl font-bold">Yet Another</div>
         </div>
         <div className="p-6 bg-white shadow-md rounded-md text-black">
-          <img src="/3.jpeg" alt="Final" className="mb-4 h-60 w-52 rounded-md" />
+          <img src="/3.jpeg" alt="Final" className="mb-4 rounded-md" />
           <div className="text-2xl font-bold">Final Dish</div>
         </div>
       </div>
+    </div>
     </div>
   )
 }

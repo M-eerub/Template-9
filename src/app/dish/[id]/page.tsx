@@ -65,7 +65,7 @@ export default function DishPage({ params }: { params: Promise<{ id: string }> }
               {/* Add to Cart Button */}
               <button
                 onClick={() => addToCart(dish)}
-                className="flex items-center bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex items-center bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <ShoppingCart className="mr-2 h-4 w-4" /> Add to Cart
               </button>

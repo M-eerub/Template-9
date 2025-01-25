@@ -1,15 +1,16 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { MenuItem } from '@/app/type/menu'
+import Image from 'next/image';
+import Link from 'next/link';
+import { MenuItem } from '@/app/type/menu';
 
 export function MenuItemCard({ item }: { item: MenuItem }) {
   return (
     <Link href={`/dish/${item.id}`}>
       <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-        <div className="relative h-48">
+        <div className="relative w-full h-48">
           <Image
             src={item.image}
             alt={item.name}
+            fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
@@ -29,6 +30,5 @@ export function MenuItemCard({ item }: { item: MenuItem }) {
         </div>
       </div>
     </Link>
-  )
+  );
 }
-
